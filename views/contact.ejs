@@ -1,0 +1,48 @@
+
+<%- include('./header.ejs') %>
+<!-- contact us section start -->
+  <div class="container-fluid ">
+    <h2 class="text-center text-info py-4"><u>Contact us</u></h2>
+    <div class="row"> 
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/insertcontact" method="post">
+                        <div class="mb-3">
+                          <label>NAME</label>
+                          <input type="text" class="form-control" name="name" />
+                        </div>
+                        <div class="mb-3">
+                          <label>Email</label>
+                          <input type="text" class="form-control" name="email" />
+                        </div>
+                        <div class="mb-3">
+                          <label>phone</label>
+                          <input type="text" class="form-control" name="phone" />
+                        </div>
+                        <div class="mb-3">
+                          <label></label>
+                          <textarea
+                            class="form-control"
+                            placeholder="Message"
+                            name="message"
+                          ></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-warning">send message</button>
+                      </form>
+                </div>
+            </div>        
+        
+        </div>
+
+    </div>  <!---row -end------>  
+   
+
+    
+    
+    
+     
+
+  </div>   <!--container-fluid---end-->
+  <%- include('./footer.ejs') %>

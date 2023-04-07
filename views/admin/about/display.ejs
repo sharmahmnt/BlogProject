@@ -1,0 +1,121 @@
+<%- include('../../header.ejs') %>
+
+<section class="mtb-25">
+  <div class="container bg-white mt-md-4">
+    <div class="body-content">
+      <div class="row mt-md-4">
+        <div class="col-md-3">
+          <div class="dash-left">
+            <ul>
+              <li class="active">
+                <a href="/admin/dashboard" class="active nav-link">Dashboard</a>
+              </li>
+              <li><a href="/admin/blogdisplay" class="">Display Blog</a></li>
+              <li><a href="/admin/categorydisplay" class="">Categories</a></li>
+              <li><a href="/admin/contactdisplay" class="">Contact</a></li>
+              <li><a href="admin/aboutdisplay" class="">About</a></li>
+              <li><a href="/login" class="">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="dash-right">
+            <div class="dash-header">
+              <div class="dash-title">
+                <h1 style="color: #386576">About</h1>
+              </div>
+              <div class="dash-nav">
+                <button
+                  type="button"
+                  class="btn btn- btn-warning text-white"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  Add 
+                </button>
+              </div>
+            </div>
+          </div>
+          <table class="table-bordered table-striped">
+            <tr class="table_heading text-white text-center">
+              <th>ID No.</th>
+              <th>Title</th>
+              <th>Description</th>
+              <th>Action</th>
+            </tr>
+           
+            <tr>
+              <td></td>
+              <td class="text-center"></td>
+              <td class="text-justify"></td>
+              
+              <td>
+                <a href="" class="btn btn-warning btn-lg action-btn"
+                  ><i class="fa-solid fa-eye"></i
+                ></a>
+                <a href="" class="btn btn-warning btn-lg action-btn"
+                  ><i class="fa-regular fa-pen-to-square"></i
+                ></a>
+                
+              </td>
+            </tr>
+
+          
+          </table>
+        </div>
+      </div>
+      <!----row-end----->
+    </div>
+  </div>
+  <!---container--end---->
+</section>
+<!-- modal blog create -->
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add blog</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form action="/insertabout" method="post" enctype="post">
+          <div class="mb-3">
+            <label for="">Title</label>
+            <input type="text" name="title" class="form-control" />
+          </div>
+          <div class="mb-3">
+            <label for="">Discription</label>
+
+            <textarea
+              type="text"
+              name="description"
+              class="form-control"
+            ></textarea>
+          </div>
+         
+          <button type="submit" class="btn btn-warning text-white">
+            submit
+          </button>
+        </form>
+
+        ..
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('../../footer.ejs') %>

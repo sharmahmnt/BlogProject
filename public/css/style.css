@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar-dark .navbar-nav .nav-link {
+    font-weight: bold;
+    color: #fff;
+    font-size: 18px;
+    padding-right: 40px;
+}
+.logocheck{
+    font-size: 45px;
+    font-family: cursive;
+    
+}
+.banner {
+    background-image: url(../image/doc9.jpg);
+    width: 100%;
+    height: 580px;
+    background-size: cover;
+}
+.banner1 {
+    background-image: url(../image/bannerabout.jpg);
+    width: 100%;
+    height: 580px;
+    background-size: cover;
+}
+
+.blog-box {
+    text-align: center;
+
+    /* margin-bottom: 20px; */
+    
+    
+    
+}
+.blog-box p {
+    color: #666;
+}
+.blog-box h3 {
+    /* margin: 20px 0; */
+    font-size: 22px;
+    color: #000;
+    font-weight: 200;
+}
+.social-icons a {
+    padding: 8px 93px;
+    background: #003a50;
+    color: #fff;
+    font-size: 35px;
+}
+.login-box {
+    box-shadow: 1px 1px 7px #666;
+    padding: 20px;
+    margin-top: 10%;
+    background: rgb(37, 35, 35);
+    align-items: center;
+}
+.login-box a {
+   
+    align-items: center;
+}
+.body-content{
+    min-height: 380px;
+}
+.dash-left ul li {
+    background-color: #f1f1f1;
+    margin-bottom: 5px;
+    list-style: none;
+
+}
+.dash-left ul li a.active {
+    background-color: #029477;
+    color: #fff;
+}
+.dash-left ul li a {
+    color: #333;
+    padding: 5px 15px;
+    display: block;
+    text-decoration: none;
+
+
+}
+.dash-left ul li a:hover {
+    background-color: #029477;
+    color: #fff;
+}
+.dash-header {
+    display: flex;
+    justify-content: space-between;
+}
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+table .table_heading {
+    background-color: #029477!important;
+    color: white!important;
+    font-size: 20px;
+}
+.blogedit {
+    margin: -255px 0px 0px 440px;
+   
+}
+.rb-box{
+    
+    padding-bottom: 10px;
+}
+@media (min-width: 768px){
+
+    .blogedit {
+        margin: -255px 0px 0px 440px;
+       
+    }
+
+
+}

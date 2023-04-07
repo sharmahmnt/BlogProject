@@ -1,0 +1,43 @@
+<%- include('../header.ejs') %>
+
+<!-- dashboard section start -->
+<section class="mtb-25">
+  <div class="container bg-white mt-md-4">
+    <div class="body-content">
+      <div class="row mt-md-4">
+        <div class="col-md-3">
+          <div class="dash-left">
+            <ul>
+              <li class="active">
+                <a href="/admin/dashboard" class="active nav-link">Dashboard</a>
+              </li>
+              <li><a href="/admin/blogdisplay" class="">Display Blog</a></li>
+              <li><a href="/admin/categorydisplay" class="">Categories</a></li>
+              <li><a href="/admin/contactdisplay" class="">Contact</a></li>
+              <li><a href="/admin/aboutdisplay" class="">About</a></li>
+              <li><a href="/logout" class="">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="dash-right">
+            <h1 class="text-dark justify-content-lg-evenly">
+              Welcome in Dashboard <%= n %>
+            </h1>
+
+            <h2 class="text-dark justify-content-lg-evenly"> your mailid <%= e %></h2>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!----row-end----->
+    </div>
+  </div>
+  <!---container--end---->
+</section>
+
+<%- include('../footer.ejs') %>

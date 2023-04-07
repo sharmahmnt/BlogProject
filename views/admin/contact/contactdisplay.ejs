@@ -1,0 +1,119 @@
+<%- include('../../header.ejs') %>
+<section class="mtb-25">
+  <div class="container bg-white mt-md-4">
+    <div class="body-content">
+      <div class="row mt-md-4">
+        <div class="col-md-3">
+          <div class="dash-left">
+            <ul>
+              <li class="active">
+                <a href="/admin/dashboard" class="active nav-link">Dashboard</a>
+              </li>
+              <li><a href="/admin/blogdisplay" class="">Display Blog</a></li>
+              <li><a href="/admin/categorydisplay" class="">Categories</a></li>
+              <li><a href="/admin/contactdisplay" class="">Contact</a></li>
+              <li><a href="/about" class="">About</a></li>
+              <li><a href="/login" class="">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="dash-right">
+            <div class="dash-header">
+              <div class="dash-title">
+                <h1 style="color: #386576">contact</h1>
+              </div>
+              <div class="dash-nav">
+                <button
+                  type="button"
+                  class="btn btn- btn-warning text-white"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  Add Contact
+                </button>
+              </div>
+            </div>
+          </div>
+          <table class="table-bordered table-striped text-center">
+            <tr class="table_heading text-white text-center">
+              <th>ID No.</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone no.</th>
+              <th>Message</th>
+            </tr>
+            <% con.forEach((contactblog)=>{ %>
+
+            <tr>
+              <td><%= contactblog._id %></td>
+              <td><%= contactblog.name %></td>
+              <td><%= contactblog.email %></td>
+              <td><%= contactblog.phone %></td>
+
+              <td><%= contactblog.message %></td>
+            </tr>
+
+            <% }) %>
+          </table>
+        </div>
+      </div>
+      <!----row-end----->
+    </div>
+  </div>
+  <!---container--end---->
+</section>
+<!-- modal blog create -->
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Contact</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form action="/insertcontact" method="post">
+          <div class="mb-3">
+            <label>NAME</label>
+            <input type="text" class="form-control" name="name" />
+          </div>
+          <div class="mb-3">
+            <label>Email</label>
+            <input type="text" class="form-control" name="email" />
+          </div>
+          <div class="mb-3">
+            <label>phone</label>
+            <input type="text" class="form-control" name="phone" />
+          </div>
+          <div class="mb-3">
+            <label></label>
+            <textarea
+              class="form-control"
+              placeholder="Message"
+              name="message"
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-warning">send message</button>
+        </form>
+
+        ..
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('../../footer.ejs') %>

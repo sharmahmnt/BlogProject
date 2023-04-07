@@ -1,0 +1,29 @@
+<%- include('../../header.ejs') %>
+
+<%- include('../adminsidebar.ejs') %>
+
+<div class="d-md-flex justify-content-md-start py-0 blogedit">
+    <div class="dash-title col-md-7">
+        <h1 style="color: #386576">category update</h1>
+        <form action="/categoryupdate/<%= edit._id %>"  method="post" enctype="multipart/form-data"> 
+            <div class="mb-3">
+                <label for="">title</label>
+                <input type="text" name="title" class="form-control" value="<%=edit.title %>">
+            </div>
+            <div class="mb-3">
+                <label for="">description</label>
+                <textarea name="description"   class="form-control"  id="" cols="30" rows="10"><%= edit.description %></textarea>
+                
+            </div  >
+            
+            <button type="submit"  class="btn btn-warning ">update</button>
+        </form>
+        
+      </div>
+</div>
+
+
+
+
+
+<%- include('../../footer.ejs') %>

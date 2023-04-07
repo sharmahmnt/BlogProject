@@ -1,0 +1,35 @@
+<%- include('./header.ejs') %>
+
+<!---blog-section start--->
+<section class="mt-lg-5">
+    <div class="container mt-4">
+        <h2 class=" text-center text-info py-0"> Health Blogs</h2>
+        <div class="row">
+            <% b.forEach((item)=>{ %>
+            <div class="col-lg-4">
+                <div class=" card  blog-box">
+                    <img src="<%= item.image.url %>" alt="anand" style="width: 350px;height: 250px;" class="w-100">
+                    <div class="card-body">
+                        <h3 class="card-title"><%=item.title  %></h3>
+                        <p class="card-text "><%=item.description  %></p>
+                        <p><span><%= item.createdAt.toLocaleDateString() %></span></p>
+                       
+                       <a href="/blog2/<%= item._id %>"><button class="btn btn-warning text-white text-uppercase">Read more</button></a>
+
+                    </div>
+                   
+                </div>
+            </div>
+            <% })  %>
+          
+            
+
+        </div>
+        
+
+    </div>
+
+
+</section>
+
+  <%- include('./footer.ejs') %>

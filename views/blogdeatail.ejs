@@ -1,0 +1,79 @@
+
+<%- include('./header.ejs') %>
+
+<!---blog 1-section start--->
+
+<section class="blog-detail mtb-40">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="blog-left">
+                    <h1><%= d.title %></h1>
+                    <div class="posted-on">
+                        <p>by <span>PNINFOSYS</span> on <span><%= item.createdAt.toLocaleDateString() %></span></p>
+                    </div>
+                    <div class="detail-img">
+                       <img src="<%= d.image.url %>" alt="blog1" height="426" width="640"/>
+                    </div>
+                    <div class="blog-desc">
+                        <p><%= d.description %></p>
+                    </div>
+                </div>
+            </div>
+           <% r.forEach((recentitem)=>{ %>
+
+          <%  }) %>
+            <div class="col-md-4 ">
+                <div class="blog-right">
+                    <div class="right-widget recent-post align-items-center">
+                        <h3 class="mt-3"  style="background-color:#386576;">Recent Blogs</h3>
+                    
+                        <a href="/blogdetail.html">
+                            <div class="rb-box">
+                                <div class="rb-box-img">
+                                    <img src="<%= recentitem.image.url %>" alt="blog1 anoop"  class="w-25"/>
+                                </div>
+                                <div class="rb-box-desc">
+                                    <h4 class="text-align-start">Full Stack Developer</h4>
+                                    <p>11/28/2022</p>
+                                </div>
+                            </div>
+                        </a>
+                    
+                        <a href="/blogblo2.html">
+                            <div class="rb-box">
+                                <div class="rb-box-img">
+                                    <img src="image/ambu1.jpg" alt="blog1"  class="w-25"/>
+                                </div>
+                                <div class="rb-box-desc">
+                                    <h4>Fast service</h4>
+                                    <p>04/18/2022</p>
+                                </div>
+                            </div>
+                        </a>
+                    
+                        <a href="/blogblo3.html">
+                            <div class="rb-box">
+                                <div class="rb-box-img">
+                                    <img src="image/tripmachine7.jpg" alt="blog3" class="w-25" />
+                                </div>
+                                <div class="rb-box-desc">
+                                    <h4>Emergency service</h4>
+                                    <p>04/05/2022</p>
+                                </div>
+                            </div>
+                        </a>
+                    
+                    </div>
+                     <div class="right-widget categories">
+                         <h3 style="background-color:#386576;">Categories</h3>
+                         <ul>
+                            
+                        </ul>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<%- include('./footer.ejs') %>

@@ -1,0 +1,68 @@
+<%- include('./header.ejs') %>
+
+<!---blog 1-section start--->
+
+<section class="blog-detail mtb-40">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="blog-left">
+          <h1><%= d.title %></h1>
+          <div class="posted-on">
+            <p><span><%= d.createdAt.toLocaleDateString() %></span></p>
+          </div>
+          <div class="detail-img">
+            <img
+              src="<%= d.image.url %>"
+              alt="blog1"
+              height="426"
+              width="640"
+            />
+          </div>
+          <div class="blog-desc">
+            <p><%= d.description %></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="blog-right">
+          <div class="right-widget recent-post align-items-center">
+            <h3 class="mt-3" style="background-color: #386576">Recent Blogs</h3>
+            <% r.forEach((recentitem)=>{ %>
+            <a href="/blog2/<%= recentitem._id %>">
+              <div class="rb-box">
+                <div class="rb-box-img">
+                  <div>
+                    <img
+                      src="<%= recentitem.image.url %>"
+                      alt="blog1 anoop"
+                      class="w-25"
+                    />
+                  </div>
+                  <div class="rb-box-desc">
+                    <h4 class="text-align-start"><%= recentitem.title %></h4>
+                    
+                </div>
+                
+              </div>
+            </a>
+
+            <% }) %>
+          </div>
+          <div class="right-widget categories">
+            <h3 style="background-color: #386576">Categories</h3>
+
+            <% c.forEach((categoryitem)=>{ %>
+            <a href="/blog2/<%= categoryitem._id %>"
+              ><h5><%= categoryitem.title %></h5>
+            </a>
+
+            <% }) %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<%- include('./footer.ejs') %>
