@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const port = 3000
-const web = require('./Routes/web')
+const web = require('./routes/web')
 const connectDB = require('./db/connectdb')
 const fileupload = require("express-fileupload");
 var cloudinary =require('cloudinary')
