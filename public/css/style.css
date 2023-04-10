@@ -112,6 +112,12 @@ table .table_heading {
         margin: -255px 0px 0px 440px;
        
     }
+    .banner {
+        background-image: url(../image/doc9.jpg);
+        width: 100%;
+        height: 580px;
+        background-size: cover;
+    }
 
 
 }
